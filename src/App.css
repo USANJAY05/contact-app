@@ -1,0 +1,396 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+a{
+  color: rgb(151, 254, 54);
+}
+.desk{
+  display: none;
+}
+button{
+  background-color: #5f88ed;
+  border: none;
+}
+button:hover{
+  color: black;
+}
+.header{
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5f88ed;
+  color: white;
+  padding: 10px;
+  row-gap: 10px;
+  position: sticky;
+  top: 0px;
+}
+
+.header-icons{
+  font-size: 1.5em;
+}
+
+.icon{
+  font-size: 1.2em;
+}
+.trash:hover{
+  color: red;
+}
+
+.header-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-bottom{
+  width: 100%;
+}
+
+input[type="search"]{
+  font-size: 1.3em;
+  padding: 5px;
+  outline: 0.1px;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 8px;
+  border-style: none;
+  
+}
+.contact-card{
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px .5px;
+  padding: 10px;
+  align-items: center;
+}
+.contact-card:hover{
+  background-color: rgba(177, 177, 177, 0.477);
+}
+
+.card-left{
+  display: flex;
+  column-gap: 10px;
+}
+
+.card-right{
+  width: 130px;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.box{
+  background-color: rgb(185, 228, 255);
+  width: 50px;
+  height: 50px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+.card-details{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+} */
+
+.features{
+  z-index: 0;
+  position: sticky;
+  background-color: #5f88ed;
+  bottom: 0px;
+  padding: 10px 15px 25px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.features-icon{
+  font-size: 2em;
+  color: white;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 20px;
+  width: 88%;
+}
+.form-name,.form-phone,.form-email,.form-notes,.form-date,.form-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 10px;
+}
+.form-date>input,.form-email>input,.form-name>input,.form-phone>input,.form-notes>textarea{
+  width: 100%;
+  padding: 8px;
+  font-size: 1.2em;
+}
+.form>.box{
+  width: 130px;
+  height: 130px;
+  border-radius: 130px;
+}
+.form-notes>textarea{
+  height: 100px;
+}
+.form-header>div>input{
+  width: 40px;
+  height: 40px;
+}
+
+.form-header>button,.form-header>div>button{
+  padding: 10px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  color: white;
+}
+.phone>input{
+  text-align: center;
+  border: none;
+  width: 100%;
+  font-size: 2em;
+  padding: 10px;
+}
+.phone-main{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phone{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.phone>button{
+  width: 80px;
+  height: 80px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+.groups,.settings{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+@media(min-width:900px) {
+  .features-icon{
+    color: black;
+  }
+  .header{
+    position: sticky;
+    top: 0px;
+  }
+  .app{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+  }
+  .desk-main{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    height: 87vh;
+  }
+  .features{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    row-gap: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 2px;
+    width: 200px;
+    height: 100%-2px;
+  }
+  .main{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+  }
+  .header-bottom{
+    width: 50%;
+  }
+  .card-details{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 40px;
+  }
+  button{
+    border-radius: 8px;
+    padding: 15px 20px;
+    border: none;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+  }
+  button:hover{
+    background-color: #5f87ed65;
+  }
+  .contact-card{
+    display: flex;
+    justify-content:space-between;
+    box-shadow: 0px .5px;
+    padding: 10px;
+    align-items: center;
+  }
+  .desk{
+    display: block;
+  }
+  .card-left,.desk{
+    width: 20%;
+    overflow: auto;
+    text-align: center;
+  }
+  .desk-age{
+    width: 60px;
+  }
+  .desk-email{
+    display: none;
+  }
+  .form{
+    width: 40%;
+  }
+  .form-header>button{
+    background-color: #5f88ed;
+  }
+  .phone{
+    width: 30%;
+  }
+
+}
+
+
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.star {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  clip-path: polygon(
+      50% 0%, 61% 35%, 98% 35%, 68% 57%,
+      79% 91%, 50% 70%, 21% 91%, 32% 57%,
+      2% 35%, 39% 35%
+  );
+  background: grey;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+input[type="checkbox"]:checked + .star {
+  background: gold;
+}
+
+
+
+
+
+@media (min-width:980px) {
+  .features-icon{
+    color: black;
+  }
+  .header{
+    position: sticky;
+    top: 0px;
+  }
+  .app{
+    display: flex;
+    flex-direction: column;
+
+  }
+  .desk-main{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    height: 87vh;
+  }
+  .features{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    row-gap: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 2px;
+    width: 200px;
+    height: 100%-2px;
+  }
+  .main{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+  }
+  .header-bottom{
+    width: 50%;
+  }
+  .card-details{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 40px;
+  }
+  button{
+    border-radius: 8px;
+    padding: 15px 20px;
+    border: none;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+  }
+  button:hover{
+    background-color: #5f87ed65;
+  }
+  .contact-card{
+    display: flex;
+    justify-content:space-between;
+    box-shadow: 0px .5px;
+    padding: 10px;
+    align-items: center;
+  }
+  .desk{
+    display: block;
+  }
+  .card-left,.desk{
+    width: 25%;
+    overflow: auto;
+    text-align: center;
+  }
+  .desk-age{
+    width: 60px;
+  }
+  .desk-email{
+    width: 30%;
+  }
+  .form{
+    width: 40%;
+  }
+
+}
