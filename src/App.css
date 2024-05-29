@@ -2,8 +2,16 @@
   margin: 0px;
   padding: 0px;
 }
+
+.desk-main {
+  height: calc(100vh - 101px);
+}
+.main{
+  overflow-y: scroll;
+}
+
 a{
-  color: rgb(151, 254, 54);
+  color: rgb(0, 194, 253);
 }
 .desk{
   display: none;
@@ -108,12 +116,13 @@ input[type="search"]{
   position: sticky;
   background-color: #5f88ed;
   bottom: 0px;
-  padding: 10px 15px 25px 15px;
+  padding: 10px 15px 40px 15px;
   display: flex;
   justify-content: space-between;
+  overflow-y: scroll;
 }
 .features-icon{
-  font-size: 2em;
+  font-size: 2.6em;
   color: white;
 }
 
@@ -152,7 +161,7 @@ input[type="search"]{
   padding: 10px;
   font-size: 1.2em;
   border-radius: 8px;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .phone>input{
   text-align: center;
@@ -162,14 +171,13 @@ input[type="search"]{
   padding: 10px;
 }
 .phone-main{
-  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .phone{
   display: flex;
-  width: 100%;
+  width: 300px;
   flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
@@ -196,6 +204,9 @@ input[type="search"]{
   height: 100%;
 }
 
+.features>button>h2{
+  display: none;
+}
 
 
 @media(min-width:900px) {
@@ -216,7 +227,7 @@ input[type="search"]{
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    height: 87vh;
+    height: calc(100vh - 101px);
   }
   .features{
     display: flex;
@@ -229,7 +240,6 @@ input[type="search"]{
     height: 100%-2px;
   }
   .main{
-    width: 100%;
     height: 100%;
     overflow-y: scroll;
   }
@@ -281,7 +291,10 @@ input[type="search"]{
     background-color: #5f88ed;
   }
   .phone{
-    width: 30%;
+    width: 350px;
+  }
+  .features>button>h2{
+    display: block;
   }
 
 }
@@ -310,7 +323,9 @@ input[type="checkbox"]:checked + .star {
   background: gold;
 }
 
-
+.main{
+  height: 89%;
+}
 
 
 
@@ -331,7 +346,8 @@ input[type="checkbox"]:checked + .star {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    height: 87vh;
+    height: calc(100vh - 101px);
+
   }
   .features{
     display: flex;
@@ -392,5 +408,11 @@ input[type="checkbox"]:checked + .star {
   .form{
     width: 40%;
   }
+  .features>button>h2{
+    display: block;
+  }
 
 }
+
+
+

@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './App.css'
 import Header from './Header'
 import Main from './Main'
 
 const App = () => {
-  const [items,setItems]=useState([
-    {}
-  ])
-  const [favourate,setFavourate]=useState()
+  const [items,setItems]=useState([])
+  useEffect(()=>{
+    const storage=JSON.parse(localStorage.getItem("contacts"))||[]
+    setItems(storage)
+  },[])
+  const [favourate,setFavourate]=useState(false)
   const [fName,setFName]=useState()
   const [lName,setLName]=useState()
   const [email,setEmail]=useState()
@@ -30,12 +32,13 @@ const App = () => {
     setPhoneNo(phoneNo.slice(0, -1));
   }
 
-  const addContacts=(fName,lName,date,notes,email,phone)=>{
-    const id=items.length>1?items[items.length-1].id+1:1
+  const addContacts=(fName,lName,date,notes,email,phone,favourate)=>{
+    const id=items.length>0?items[items.length-1].id+1:1
     console.log(id)
-    const item={id:id,fName,lName,date,notes,email,phone}
+    const item={id:id,fName,lName,date,notes,email,phone,favourate}
     const list=[...items,item]
     setItems(list)
+    localStorage.setItem("contacts",JSON.stringify(list))
     setLName("")
     setFName("")
     setEmail("")
@@ -49,14 +52,18 @@ const App = () => {
     e.preventDefault()
     console.log(fName,lName,date,notes,email,phone)
     setContacts("Contacts")
-    addContacts(fName,lName,date,notes,email,phone)
+    addContacts(fName,lName,date,notes,email,phone,favourate)
   }
 
   const handleDel=(id)=>{
     const item=items.filter(item=>item.id!==id)
     console.log('hi',id)
     setItems(item)
+    localStorage.setItem("contacts",JSON.stringify(item))
+
   }
+
+
 
   const profileView=(e)=>{
     const prof=items[e-1]
@@ -88,6 +95,7 @@ const App = () => {
       setNotes={setNotes}
       setPhone={setPhone}
       handleDel={handleDel}
+      favourate={favourate}
 
       search={search}
       />

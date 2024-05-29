@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Form = ({setContacts,saveContacts,setPhone,setDate,setEmail,setFavourate,setNotes,setLName,setFName}) => {
+const Form = ({setContacts,saveContacts,setPhone,setDate,setEmail,setFavourate,setNotes,setLName,setFName,favourate}) => {
   return (
     <div className="main">
         <form className="form " onSubmit={saveContacts}>
@@ -10,7 +10,8 @@ const Form = ({setContacts,saveContacts,setPhone,setDate,setEmail,setFavourate,s
                 <input
                 type="checkbox"
                  id="star-checkbox"
-                 onChange={()=>setFavourate()}
+                 checked={favourate}
+                 onChange={()=>setFavourate(!favourate)}
                  />
                 <label htmlFor="star-checkbox" className="star"></label>
                     <button type="submit">Save</button>
@@ -23,6 +24,7 @@ const Form = ({setContacts,saveContacts,setPhone,setDate,setEmail,setFavourate,s
                 type="text"
                 placeholder='First Name'
                 required
+                autoFocus
                 onChange={(e)=>setFName(e.target.value)}
                 />
                 
