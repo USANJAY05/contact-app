@@ -29,7 +29,7 @@ const Birthday = ({ birthday, items }) => {
   return (
     <div className="main">
       {sortedItems.map(item => (
-        <section className="contact-card" key={item.id}>
+        <section className="contact-card" key={item.id} onClick={() => window.location.href = `tel:${item.phone}`}>
           <div className='card-left'>
             <div className="box">{item.fName[0]}</div>
             <div className="card-details">
@@ -39,14 +39,8 @@ const Birthday = ({ birthday, items }) => {
           </div>
           <h3 className='desk'>{item.phone}</h3>
           <h3 className='desk desk-email'>{item.email}</h3>
-          <h3 className='desk desk-age'> {calculateNextBirthday(item.date)} days</h3>
           <div className="card-right">
-            <a href={`mailto:${item.email}`} onClick={(e) => e.stopPropagation()}>
-              <FaMessage className='icon' />
-            </a>
-            <a href={`tel:${item.phone}`} onClick={(e) => e.stopPropagation()}>
-              <IoCall className='icon' />
-            </a>
+          <h3 className=' desk-age'> {calculateNextBirthday(item.date)} days</h3>
           </div>
         </section>
       ))}

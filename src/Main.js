@@ -70,7 +70,7 @@ const Main = ({ items, phoneNo, handlePhoneNo, clearPhoneNo, contacts, setContac
       )}
       
       {contacts === "Settings" && (
-        <Settings name={'coming soon'} />
+        <Settings name={'coming soon'} items={items.length} favourate={favourateItems.length} />
       )}
 
       <Features 

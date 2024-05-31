@@ -19,7 +19,7 @@ const App = () => {
 
   const [search,setSearch]=useState('')
 
-  const [contacts,setContacts]=useState('Contacts')
+  const [contacts,setContacts]=useState('Birthday')
   const [groups,setGroups]=useState()
   const [settings,setSettings]=useState()
   const [phoneNo,setPhoneNo]=useState('')
