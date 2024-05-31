@@ -66,7 +66,7 @@ const Main = ({ items, phoneNo, handlePhoneNo, clearPhoneNo, contacts, setContac
       )}
 
       {contacts==="Birthday"&&(
-        <Birthday />
+        <Birthday items={items} />
       )}
       
       {contacts === "Settings" && (

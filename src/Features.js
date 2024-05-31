@@ -21,12 +21,13 @@ const Features = ({contacts,setContacts}) => {
       <button onClick={()=>setContacts("Phone")}  style={{backgroundColor:contacts==="Phone"?'#5f87ed8e':'rgba(0, 0, 0, 0)'}}>
         <IoIosKeypad color={contacts==="Phone"?'gold':'black'}  className='features-icon'/><h2>Phone</h2>
       </button>
+      <button onClick={()=>setContacts("Birthday")}  style={{backgroundColor:contacts==="Birthday"?'#5f87ed8e':'rgba(0, 0, 0, 0)'}}>
+        <FaBirthdayCake color={contacts==="Birthday"?'gold':'black'} className='features-icon'/><h2>Birthday</h2>
+      </button>
       <button onClick={()=>setContacts("Settings")}  style={{backgroundColor:contacts==="Settings"?'#5f87ed8e':'rgba(0, 0, 0, 0)'}}>
         <IoMdSettings color={contacts==="Settings"?'gold':'black'} className='features-icon'/><h2>Settings</h2>
       </button>
-      <button onClick={()=>setContacts("Birthday")}  style={{backgroundColor:contacts==="Birthday"?'#5f87ed8e':'rgba(0, 0, 0, 0)'}}>
-        <FaBirthdayCake color={contacts==="Birthday"?'gold':'black'} className='features-icon'/><h2>Settings</h2>
-      </button>
+
     </footer>
   )
 }
