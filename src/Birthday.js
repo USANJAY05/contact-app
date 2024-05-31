@@ -1,6 +1,5 @@
 import React from 'react'
-import { IoCall } from 'react-icons/io5';
-import { FaMessage } from 'react-icons/fa6';
+
 
 const Birthday = ({ birthday, items }) => {
   function calculateNextBirthday(dob) {

@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import Features from './Features';
 import Form from './Form';
 import Phone from './Phone';

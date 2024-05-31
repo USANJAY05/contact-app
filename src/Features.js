@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaStar } from "react-icons/fa";
 import { IoIosContact } from "react-icons/io";
-import { FaUserGroup } from "react-icons/fa6";
+// import { FaUserGroup } from "react-icons/fa6";
 import { IoMdSettings } from "react-icons/io";
 import { IoIosKeypad } from "react-icons/io";
 import { FaBirthdayCake } from "react-icons/fa";
