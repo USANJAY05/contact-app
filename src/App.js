@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { v4 as uuidv4 } from 'uuid'; // Import the uuid function
 import './App.css'
 import Header from './Header'
 import Main from './Main'
@@ -32,21 +33,22 @@ const App = () => {
     setPhoneNo(phoneNo.slice(0, -1));
   }
 
-  const addContacts=(fName,lName,date,notes,email,phone,favourate)=>{
-    const id=items.length>0?items[items.length-1].id+1:1
-    console.log(id)
-    const item={id:id,fName,lName,date,notes,email,phone,favourate}
-    const list=[...items,item]
-    setItems(list)
-    localStorage.setItem("contacts",JSON.stringify(list))
-    setLName("")
-    setFName("")
-    setEmail("")
-    setPhone('')
-    setDate('')
-    setFavourate(false)
-    setNotes('')
-  }
+  const addContacts = (fName, lName, date, notes, email, phone, favourate) => {
+    // Generate a unique ID with UUID and timestamp
+    const uniqueId = `${uuidv4()}-${Date.now()}`;
+    console.log(uniqueId);
+    const item = { id: uniqueId, fName, lName, date, notes, email, phone, favourate };
+    const list = [...items, item];
+    setItems(list);
+    localStorage.setItem("contacts", JSON.stringify(list));
+    setLName("");
+    setFName("");
+    setEmail("");
+    setPhone('');
+    setDate('');
+    setFavourate(false);
+    setNotes('');
+  };
 
   const saveContacts=(e)=>{
     e.preventDefault()
